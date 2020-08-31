@@ -1,0 +1,211 @@
+@font-face {
+	font-family: 'Icomoon';
+	src: url('fonts/icomoon.eot');
+	src: local('☺'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype'), url('fonts/icomoon.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Pacifico';
+	src: url('fonts/Pacifico-Regular.eot');
+	src: local('☺'), url('fonts/Pacifico-Regular.woff') format('woff'), url('fonts/Pacifico-Regular.ttf') format('truetype'), url('fonts/Pacifico-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Quicksand';
+	src: url('fonts/Quicksand-Regular.eot');
+	src: local('☺'), url('fonts/Quicksand-Regular.woff') format('woff'), url('fonts/Quicksand-Regular.ttf') format('truetype'), url('fonts/Quicksand-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Flower';
+	src: url('fonts/IndieFlower-Regular.eot');
+	src: local('☺'), url('fonts/IndieFlower-Regular.woff') format('woff'), url('fonts/IndieFlower-Regular.ttf') format('truetype'), url('fonts/IndieFlower-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+a{
+  text-decoration: none;
+  color:green;
+}
+
+.sidebar > ul > li:hover{
+  background-color: #f3f3f3;
+}
+
+.sidebar > ul > li:active{
+  background-color: #aeffc9;
+}
+
+.en_cours{
+  background-color: #aeffc9;
+}
+
+body{
+	padding: 0%;
+	margin: 0%;
+  background-color: #f3f3f3;
+  background-image: url(trigris.svg), url(trivert.svg);
+  background-repeat: no-repeat;
+  background-position: left -300px top -300px,  right -450px top -500px;
+  background-size: 1080px;
+  font-size: 16pt;
+}
+
+.container{
+  width:80%;
+  max-width: 866px;
+  box-sizing: border-box;
+  margin: 50px auto;
+  display: flex;  
+}
+
+.wrap_content{
+  width:810px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  border-top: 1px solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
+}
+
+.avatar{
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.etat_civil{
+  background-color: #aeffc9;
+  margin: 5px;
+  padding-bottom: 10px;
+  display: flex;
+
+}
+
+h1{
+  margin-bottom: 0;
+  margin-top: 70px;
+  margin-left: 15px;
+}
+
+.civil {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 15px;
+}
+
+.me{
+  text-align: center;
+  font-size: 22pt;
+}
+
+h1, h2, h3{
+  font-family: "Quicksand";
+}
+
+p{
+  font-family: "Flower";
+}
+
+.info{
+  border-top: 1mm solid #aeffc9;
+}
+
+.cont_info{
+  display: flex;
+}
+
+.perso{
+  list-style: none;
+  font-family: "Flower";
+}
+
+.persos{
+  list-style: none;
+  font-family: "Flower";
+}
+
+.soft{
+  display: flex;
+  align-content: space-between;
+  border-top: 1mm solid #aeffc9;
+}
+
+.skill{
+  width: 45%;
+}
+
+.crt_info{ 
+  width: 115%;
+}
+
+.cont_loisir{
+  display: flex;
+  align-content: space-around;
+}
+
+.crt_loisir{
+  width: 45%;
+}
+
+.sidebar{
+  width:56px;  
+  
+}
+
+.loisirs{
+  width: 769px;
+}
+
+.sidebar > ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  background-color: white;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 20px;
+}
+
+.sidebar > ul > li{
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.sidebar > .sidebar_end{
+  position: relative;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid transparent;
+    border-left: 56px solid transparent;
+    z-index: 0;
+    border-left-color: white;
+}
+
+.sidebar > .sidebar_end::after {
+  content:'';
+}
+
+.sidebar>ul>li>a{
+  position: relative;
+}
+
+.infobulle{
+  position: absolute;
+  cursor: help;
+  top: -13px;
+  left: 53px;
+  display: none;
+  font-family: "Flower";
+}
+
+.sidebar>ul>li>a:hover>span{
+  display: inline;
+}

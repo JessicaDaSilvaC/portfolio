@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Contacter Jessica</title>
+    <link href="style2.css" rel="stylesheet">
+</head>
+<body>
+    <div class="global">
+        <div class="scroll">
+            <div class="scroll_color">
+                <div class="avatar">
+                    <img src="bellette.png" width="200" height="200" onmouseover="this.src='bellettec.png';" onmouseout="this.src='bellette.png'" alt="Avatar" />
+                </div>
+                <div class="nom">
+                    <h1>Jessica <br> Da Silva Cunha </h1>
+                    <p class="civil">Développeuse web/web mobile</p>
+                    <a href="https://www.linkedin.com/in/jessica-da-silva-cunha-715999180/"><img src="lk.png" alt="linkedin" width="30" height="25" class="civil"></a>
+                    <a href="https://github.com/JessicaDaSilvaC"><img src="github.png" alt="GitHub" width="30" height="25" class="civil"></a>
+                </div>
+            </div>
+            <div class="scroll_cv">
+                <p class="text_scroll">
+                    <a href="CV.pdf" download="CV Jessica Da Silva Cunha">
+                        <button class="dl_cv" type="button"> Télécharger CV
+                        </button>
+                    </a></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrap_content">
+                <h2>Contact</h2>            
+                <form class="donées" name="contact" method="POST" data-netlify="true">
+                    <p class="contact">Nom*</p>
+                    <input name="nom" class="expediteur" type="text" required >
+                    <p class="contact">Nom entreprise</p>
+                    <input name="nom_entreprise" class="boite" type="text" >
+                    <p class="contact">E-mail*</p>
+                    <input name="mail" class="mail" type="email" required >
+                    <p class="contact">Objet*</p>
+                    <input name="objet" class="objet" type="text" required >
+                    <p class="contact">Message*</p>
+                    <textarea name="msg" class="message" cols="18" rows="5" required ></textarea>
+                    <input class="envoi" type="submit" value="Envoyer" >
+                </form>  
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li><a href="index.html"><img src="home.png" width="32" height="32" alt="Accueil"/><span class="infobulle" >Accueil</span></a></li>
+                    <li><a href="competences.html"><img src="competence.png" width="32" height="32" alt="Compétences"/><span class="infobulle" >Compétences</span></a></li>
+                    <li><a href="formations.html"><img src="formation.png" width="32" height="32" alt="Formations"/><span class="infobulle" >Formations</span></a></li>
+                    <li><a href="experiences.html"><img src="experience.png" width="32" height="32" alt="Expériences"/><span class="infobulle" >Expériences</span></a></li>
+                    <li><a href="portfolio.html"><img src="portfolio.png" width="32" height="32" alt="Portfolio"/><span class="infobulle" >Portfolio</span></a></li>
+                    <li class="en_cours"><a href="contact.html"><img src="contact.png" width="32" height="32" alt="Contact" /><span class="infobulle" >Contact</span></a></li>
+                </ul>
+                <div class="sidebar_end"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
