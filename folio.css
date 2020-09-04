@@ -220,6 +220,7 @@ h2{
     left: 53px;
     display: none;
     font-family: "Flower";
+    color: green;
 }
   
 .sidebar>ul>li>a:hover>span{
