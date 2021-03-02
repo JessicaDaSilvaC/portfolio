@@ -1,3 +1,9 @@
+:root{
+  --my-blue: #37515e;
+  --my-orange: #f87d13;
+  --my-white: #f5feff;
+  --my-grey: #9fa8ad;
+}
 @font-face {
 	font-family: 'Icomoon';
 	src: url('fonts/icomoon.eot');
