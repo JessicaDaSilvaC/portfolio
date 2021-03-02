@@ -39,7 +39,7 @@ body{
     padding: 0%;
   	margin: 0%;
     background-color: #f3f3f3;
-    background-image: url(trigris.svg), url(trivert.svg);
+    background-image: url(images/trigris.svg), url(images/trivert.svg);
     background-repeat: no-repeat;
     background-position: left -300px top -300px,  right -450px top -500px;
     background-size: 1080px;
