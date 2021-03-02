@@ -37,13 +37,13 @@
 	padding:0px;
 	margin:0px;
 	box-sizing:border-box;
-	font-family:'Poppins', sans-serif;
+	font-family:'PTSR';
 	perspective:800px;
 }
 
 body{
     padding: 0%;
-	margin: 0%;
+	  margin: 0%;
     background-color: var(--my-blue);
     background-image: url(images/trigris.svg), url(images/trivert.svg);
     background-repeat: no-repeat;
@@ -54,7 +54,7 @@ body{
 
 a{
     text-decoration: none;
-    color: var(--my-white);
+    color: var(--my-blue);
 }
 
 .sidebar > ul > li:hover{
@@ -114,16 +114,6 @@ h1{
 p{
     font-family: "PTSR";
     color: var(--my-white);
-}
-
-.dl_cv {
-    font-size: 16pt;
-    font-family: "PTSR";
-    text-align: center;
-    border-radius: 10px;
-    background-color: #aeffc9;
-    margin-top: 25px;
-    margin-bottom: 25px;
 }
 
 .container{
@@ -211,6 +201,7 @@ span{
     left: 53px;
     display: none;
     font-family: "PTSR";
+    color: var(--my-white);
 }
   
 .sidebar>ul>li>a:hover>span{
@@ -218,6 +209,9 @@ span{
 }
 
 /*** time line ***/
+h3{
+  font-size: 20px;
+}
 .timeline {
 	position: relative;
 	width: 800px;
@@ -330,8 +324,8 @@ span{
 
   /*Formulaire*/
 .contact{
-  font-family: "Flower";
-  color: green;
+  font-family: "PTSR";
+  color: var(--my-blue);
 }
 
 form{
@@ -342,13 +336,16 @@ form{
 }
 
 .expediteur, .boite, .mail, .objet, .message {
-  border: 2px ridge #aeffc9;
+  border: 2px ridge var(--my-white);
+  background-color: var(--my-white);
 }
 
 .envoi{
-  font-family: "Flower";
+  font-family: "PTSR";
+  color: var(--my-white);
   font-size: 16px;
-	background-color: #aeffc9;
+	background-color: var(--my-blue);
+  border: var(--my-blue);
 	text-align: center;
 	padding-left: 10px;
 	width: 140px;
