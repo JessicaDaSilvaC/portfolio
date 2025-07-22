@@ -51,7 +51,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: var(--my-blue-grey);
+  background-color: var(--my-white);
   background-image: url(images/trigris.svg), url(images/trivert.svg);
   background-repeat: no-repeat;
   background-position: left -300px top -300px, right -450px top -500px;
@@ -61,25 +61,16 @@ body {
   justify-content: center;
   align-items: flex-start;
   overflow-x: hidden;    
+  color:var(--my-black);
 }
-
-
 
 a{
   text-decoration: none;
   color: var(--my-grey);
 }
 
-.sidebar > ul > li:hover{
-  background-color: var(--my-white);
-}
-
-.sidebar > ul > li:active{
-  background-color: var(--my-orange);
-}
-
-.en_cours{
-  background-color: var(--my-orange);
+.sidebar > ul > li:{
+  background-color: var(--my-blue);
 }
 
 .global {
@@ -201,7 +192,7 @@ span{
     bottom: 0;
     width: 0;
     height: 0;
-    border-bottom: 20px solid var(--my-grey);
+    border-bottom: 20px solid var(--my-white);
     border-left: 56px solid transparent;
     z-index: 0;
     border-left-color: var(--my-blue);
@@ -222,7 +213,7 @@ span{
   left: 53px;
   display: none;
   font-family: "PTSR";
-  color: var(--my-white);
+  color: var(--my-black);
 }
   
 .sidebar>ul>li>a:hover>span{
