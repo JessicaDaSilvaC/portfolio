@@ -420,79 +420,130 @@ form {
 }
 
 
-/* ===== Responsive design ===== */
 @media screen and (max-width: 900px) {
-  /* Global layout */
+  /* Empile les blocs du contenu sans toucher à la sidebar */
   .global {
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
   }
 
   .container,
   .wrap_content,
   .scroll,
   .loisirs,
-  .timeline {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Réduction des colonnes côte à côte → empilement */
+  .timeline,
   .cont_info,
   .soft,
   .cont_loisir {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box;
   }
 
+  /* Sidebar reste à droite (fixée) */
+  .sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 56px;
+    z-index: 999;
+    background-color: var(--my-grey);
+    border-left: none;
+    border-right: 1px solid var(--my-grey);
+  }
+
+  .sidebar_end {
+    display: none;
+  }
+
+  /* Évite le débordement */
+  html,
+  body {
+    overflow-x: hidden !important;
+    padding-right: 56px; /* espace pour la sidebar */
+  }
+
+  /* Contenu qui ne passe pas derrière la sidebar */
+  .wrap_content {
+    margin-right: 56px !important;
+  }
+
+  /* Colonnes internes */
   .crt_info,
   .crt_infos,
   .skill,
   .valeur,
   .crt_loisir,
   .crt {
-    flex: unset;
-    width: 100%;
+    width: 100% !important;
+    box-sizing: border-box;
   }
 
-  /* Réduction taille image des listes */
+  /* Listes propres */
+  ul.perso li,
+  ul.persos li {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    word-break: break-word;
+  }
+
   ul.perso li img,
   ul.persos li img {
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
   }
 
-  /* Timeline */
-  .timeline {
-    padding: 0 10px;
+  /* Timeline propre */
+  .timeline:before {
+    display: none;
   }
 
   .timeline ul li {
-    width: 100%;
+    width: 100% !important;
+    padding: 20px 0 20px 10px !important;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--my-orange);
+    position: relative;
     float: none !important;
-    text-align: left !important;
-    padding: 30px 0;
+    clear: both !important;
   }
 
   .timeline ul li:before {
-    left: 0 !important;
-    right: auto !important;
+    display: none !important;
   }
 
   .timeline ul li .time {
-    position: relative;
-    top: 0;
-    left: 0 !important;
-    right: 0 !important;
-    margin-bottom: 10px;
-    display: inline-block;
+    position: static !important;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--my-orange);
+    background: none;
+    box-shadow: none;
+    padding: 0;
   }
 
   .timeline ul li .content {
-    position: relative;
-    left: 0 !important;
+    position: static !important;
     width: 100% !important;
     text-align: left !important;
+    padding: 0;
+  }
+
+  .timeline ul li .content p {
+    color: var(--my-black) !important;
   }
 }
+
