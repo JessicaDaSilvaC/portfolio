@@ -47,16 +47,23 @@
 	perspective:800px;
 }
 
-body{
-  padding: 0%;
-  margin: 0%;
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   background-color: var(--my-blue-grey);
   background-image: url(images/trigris.svg), url(images/trivert.svg);
   background-repeat: no-repeat;
-  background-position: left -300px top -300px,  right -450px top -500px;
+  background-position: left -300px top -300px, right -450px top -500px;
   background-size: 1080px;
   font-size: 16pt;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;    
 }
+
+
 
 a{
   text-decoration: none;
@@ -75,10 +82,11 @@ a{
   background-color: var(--my-orange);
 }
 
-.global{
-  width: 1196px;    
+.global {
+  width: 100%;
+  max-width: 1200px; /* adapte selon ton design */
+  margin: 40px auto;
   box-sizing: border-box;
-  margin: 50px auto;
   display: flex;
   align-content: space-around;
 }
@@ -86,7 +94,14 @@ a{
 .scroll{
   width: 23%;
 }
+body.index-page {
+  display: block; /* annule le flex du body pour l'index */
+}
 
+body.index-page .global {
+  margin: 40px auto;
+  max-width: 900px; /* adapte selon la largeur souhaitée pour l'index */
+}
 .scroll_color{
   background-color: var(--my-grey);
   margin-bottom: 0;
