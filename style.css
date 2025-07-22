@@ -1,8 +1,9 @@
 :root{
   --my-blue: #c0decd;
   --my-orange: #ff7f11;
-  --my-white: #f5feff;
+  --my-white: #f1f2ec;
   --my-grey: #b1b8af;
+  --my-blue-grey: #c8ddd0;
   --my-black:#544944;
 }
 @font-face {
@@ -11,13 +12,15 @@
 	src: local('☺'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype'), url('fonts/icomoon.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
+  color: var(--my-black);
 }
 @font-face {
 	font-family: 'Pacifico';
 	src: url('fonts/Pacifico-Regular.eot');
 	src: local('☺'), url('fonts/Pacifico-Regular.woff') format('woff'), url('fonts/Pacifico-Regular.ttf') format('truetype'), url('fonts/Pacifico-Regular.svg') format('svg');
 	font-weight: normal;
-	font-style: normal;
+	font-style: normal;  
+  color: var(--my-black);
 }
 @font-face {
 	font-family: 'Quicksand';
@@ -25,6 +28,7 @@
 	src: local('☺'), url('fonts/Quicksand-Regular.woff') format('woff'), url('fonts/Quicksand-Regular.ttf') format('truetype'), url('fonts/Quicksand-Regular.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
+  color: var(--my-black);
 }
 @font-face {
 	font-family: 'PTSR';
@@ -32,6 +36,7 @@
 	src: local('☺'), url('fonts/PTSans-Regular.woff') format('woff'), url('fonts/PTSans-Regular.ttf') format('truetype'), url('fonts/PTSans-Regular.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
+  color: var(--my-black);
 }
 
 *{
@@ -45,7 +50,7 @@
 body{
   padding: 0%;
   margin: 0%;
-  background-color: var(--my-grey);
+  background-color: var(--my-blue-grey);
   background-image: url(images/trigris.svg), url(images/trivert.svg);
   background-repeat: no-repeat;
   background-position: left -300px top -300px,  right -450px top -500px;
