@@ -377,14 +377,7 @@ form {
 }
 
 /* Divers */
-.coding {
-  margin-left: 245px;
-  margin-top: 50px;
-}
-.wait {
-  text-align: center;
-  font-size: 30px;
-}
+
 .etat_civil {
   display: flex;
   align-items: center;
