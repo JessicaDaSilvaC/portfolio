@@ -546,4 +546,54 @@ form {
     color: var(--my-black) !important;
   }
 }
+/* Correction pour portfolio.html */
+body.portfolio-page .global {
+  margin: 40px auto;
+  max-width: 1200px;
+  display: flex;
+}
 
+body.portfolio-page .scroll {
+  width: 23%;
+}
+
+body.portfolio-page .container {
+  width: 80%;
+  max-width: 866px;
+  display: flex;
+  margin-left: auto;
+}
+
+body.portfolio-page .wrap_content {
+  width: 810px;
+  padding: 20px;
+  background-color: var(--my-grey);
+  border: 1px solid var(--my-grey);
+  border-right: none;
+  box-sizing: border-box;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  body.portfolio-page .global {
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  body.portfolio-page .container,
+  body.portfolio-page .wrap_content,
+  body.portfolio-page .scroll {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  body.portfolio-page .wrap_content {
+    margin-right: 56px !important;
+  }
+}

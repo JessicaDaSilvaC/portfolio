@@ -1,0 +1,413 @@
+/* Fichier realisations.css (tout-en-un) */
+/*
+
+* 1. Variables de couleurs
+*/
+:root {
+    --my-blue: #c0decd;
+    --my-orange: #ff7f11;
+    --my-white: #f1f2ec;
+    --my-grey: #b1b8af;
+    --my-blue-grey: #c8ddd0;
+    --my-black: #544944;
+}
+/*
+* 2. Fonts
+*/
+@font-face {
+    font-family: 'Icomoon';
+    src: url('fonts/icomoon.eot');
+    src: local('☺'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype'), url('fonts/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pacifico';
+    src: url('fonts/Pacifico-Regular.eot');
+    src: local('☺'), url('fonts/Pacifico-Regular.woff') format('woff'), url('fonts/Pacifico-Regular.ttf') format('truetype'), url('fonts/Pacifico-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url('fonts/Quicksand-Regular.eot');
+    src: local('☺'), url('fonts/Quicksand-Regular.woff') format('woff'), url('fonts/Quicksand-Regular.ttf') format('truetype'), url('fonts/Quicksand-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PTSR';
+    src: url('fonts/PTSans-Regular.eot');
+    src: local('☺'), url('fonts/PTSans-Regular.woff') format('woff'), url('fonts/PTSans-Regular.ttf') format('truetype'), url('fonts/PTSans-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+* 3. Reset & Base
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'PTSR';
+    perspective: 800px;
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--my-white);
+    background-image: url(images/trigris.svg), url(images/trivert.svg);
+    background-repeat: no-repeat;
+    background-position: left -300px top -300px, right -450px top -500px;
+    background-size: 1080px;
+    font-size: 16pt;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+    color: var(--my-black);
+}
+a {
+    text-decoration: none;
+    color: var(--my-blue);
+}
+.realisation-card> a {
+    color: var(--my-grey);
+}
+
+/*
+* 4. Structure Globale et Conteneurs
+*/
+.scroll {
+    width: 23%;
+}
+.scroll_color {
+    background-color: var(--my-grey);
+    margin-bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 1px ridge var(--my-grey);
+    position: sticky;
+    top: 50px;
+}
+.avatar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+.nom {
+    text-align: center;
+    padding-bottom: 25px;
+}
+.container {
+    flex:1;
+    max-width: 866px;
+    box-sizing: border-box;
+    display: flex;
+    margin-left: auto;
+}
+.wrap_content {
+    width: 810px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--my-grey);
+    border: 1px solid var(--my-grey);
+    border-right: none;
+}
+/* Sidebar */
+.sidebar {
+  width: 56px;
+}
+
+.sidebar > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--my-grey);
+  border: 1px solid var(--my-grey);
+  border-left: none;
+  border-bottom: none;
+  padding-top: 20px;
+}
+
+.sidebar > ul > li {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.sidebar > .sidebar_end {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid var(--my-white);
+  border-left: 56px solid transparent;
+  z-index: 0;
+  border-left-color: var(--my-grey);
+}
+
+.sidebar > .sidebar_end::after {
+  content: '';
+}
+
+/* Sidebar SVG icons */
+.sidebar ul li a.svg-link svg {
+  color: var(--my-black);      /* couleur normale */
+  transition: color 0.2s;
+}
+.sidebar ul li a.svg-link:hover svg {
+  color: var(--my-white);      /* couleur au survol */
+}
+.sidebar ul li.en_cours a.svg-link svg,
+.sidebar ul li a.svg-link.active svg {
+  color: var(--my-orange);     /* couleur si actif ou page courante */
+}
+
+/* Infobulle */
+.infobulle {
+  position: absolute;
+  cursor: help;
+  top: -13px;
+  left: 53px;
+  display: none;
+  font-family: "PTSR";
+  color: var(--my-black);
+}
+.sidebar > ul > li > a:hover > .infobulle {
+  display: inline;
+}
+
+/* Global container */
+.global {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-sizing: border-box;
+  display: flex;
+}
+/* Content containers */
+.container {
+  width: 80%;
+  max-width: 866px;
+  box-sizing: border-box;
+  display: flex;
+  margin-left: auto;
+}
+.wrap_content {
+  width: 810px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--my-grey);
+  border: 1px solid var(--my-grey);
+  border-right: none;
+}
+/* Divers */
+
+.etat_civil {
+  display: flex;
+  align-items: center;
+}
+
+.etat_civil p {
+  margin: 0;
+  font-size: 1.2em;
+  color: var(--my-blue);
+}
+.cont_info {
+  display: flex;
+  gap: 40px; /* espace entre les deux listes, ajuste selon besoin */
+  flex-wrap: wrap; /* pour que ça passe bien sur petit écran */
+}
+
+.crt_info,
+.crt_infos {
+  flex: 1;
+}
+.soft {
+  display: flex;
+  gap: 40px; /* espace entre les deux colonnes */
+  flex-wrap: wrap; /* pour s'adapter aux petits écrans */
+}
+
+.skill,
+.valeur {
+  flex: 1;
+}
+
+/*
+* 5. Typographie et Couleurs
+*/
+h1 {
+    font-family: "Quicksand";
+    color: var(--my-orange);
+    font-size: 26pt;
+    text-align: center;
+    margin-top: 0;
+}
+h2 {
+  font-family: "Quicksand";
+  color: var(--my-orange);
+  margin-top: 0px;
+  margin-left: 70px;
+  font-size: 25pt;
+}
+.civil {
+    font-family: "PTSR";
+    color: var(--my-black);
+}
+.title-lg.text-upper {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--my-orange);
+    text-transform: uppercase;
+    font-size: 25pt;
+    margin-top: 0px;
+    margin-left: 70px;
+}
+h3 {
+    color: var(--my-black);
+    font-size: 20px;
+}
+p {
+    font-family: "PTSR";
+    color: var(--my-black);
+}
+
+/*
+* 6. Styles spécifiques aux réalisations (la nouvelle section)
+*/
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+.realisation-card {
+    background-color: var(--my-white);
+    border: 1px solid var(--my-grey);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+.realisation-card:hover {
+    transform: translateY(-5px);
+}
+.realisation-title {
+    color: var(--my-orange);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.realisation-desc {
+    color: var(--my-black);
+    font-family: 'PTSR', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.realisation-embed {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border: 2px solid var(--my-grey);
+    border-radius: 5px;
+}
+.realisation-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.realisation-certificat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.realisation-certificat img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.certificat-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--my-orange);
+    color: var(--my-white);
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: 'PTSR', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.certificat-link:hover {
+    background-color: var(--my-blue-grey);
+}
+
+/*
+* 7. Responsive
+*/
+@media screen and (max-width: 900px) {
+    .global {
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        box-sizing: border-box;
+    }
+    .container,
+    .wrap_content,
+    .scroll {
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+    }
+    .sidebar {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 56px;
+        z-index: 999;
+        background-color: var(--my-grey);
+        border-left: none;
+        border-right: 1px solid var(--my-grey);
+    }
+    .sidebar_end {
+        display: none;
+    }
+    html,
+    body {
+        overflow-x: hidden !important;
+        padding-right: 56px;
+    }
+    .wrap_content {
+        margin-right: 56px !important;
+    }
+    .realisations-grid {
+        grid-template-columns: 1fr;
+    }
+    .title-lg.text-upper {
+        margin-left: 0 !important;
+        text-align: center;
+    }
+}
